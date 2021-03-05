@@ -181,6 +181,8 @@ export default class Form extends Component {
     //for the case of a single input form
     if (fields.length === 0 && typeof formData !== "object") {
       return formData;
+    } else if (fields.length === 0 && typeof formData === "object") {
+      return formData;
     }
 
     let data = _pick(formData, fields);
